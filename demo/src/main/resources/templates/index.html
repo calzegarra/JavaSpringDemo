@@ -10,6 +10,8 @@
 	</head>
 	
 	<body>
+	
+	    <!-- Navegacion -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
 		  <a class="navbar-brand" href="#">Navegaci&oacute;n</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,12 +47,16 @@
 		    </form>
 		  </div>
 		</nav>
+		
+		<!-- Banner -->
 		<div class="jumbotron">
 		    <h1 class="display-4">Bienvenido Hamijo!</h1>
 			<p class="lead">
             Esta es una unidad de h&eacute;roe simple, un componente simple de estilo jumbotron para llamar la atenci&oacute;n adicional al contenido destacado o la informaci&oacute;n.</p>
 			<hr class="my-4">
 			<p>Utiliza clases de utilidad para la tipograf&iacute;a y el espaciado para espaciar el contenido dentro del contenedor m&aacute;s grande.</p>
+		    
+		    <!-- Tabla dinamica -->
 		    <table class="table table-striped table-dark">
 			  <thead>
 			    <tr>
@@ -66,8 +72,45 @@
 			      <td th:text="${user.nombreUsuario}"></td>
 			    </tr>
 			  </tbody>
-			</table>		    
-		    <a class="btn btn-primary btn-lg" href="#" role="button">Leer m&aacute;s</a>
-		</div>
+			</table>
+			
+			<!-- Imagen -->
+			<div class="container">
+				<div class="row">
+					<div class="col-3">
+					       <div class="card" style="width: 18rem;">
+							  <img th:href="@{/img/cafe.jpg}" src="../static/img/cafe.jpg" class="card-img-top">
+							  <div class="card-body">
+							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							  </div>
+							</div>	
+							<br/>
+							<a class="btn btn-primary btn-lg" href="#" role="button">Leer m&aacute;s</a>
+						</div>
+					</div>
+					
+					<!-- Paginacion -->
+					<div class="row">
+					   <nav style="margin:auto" aria-label="Page navigation example">
+						 <ul class="pagination">
+						     <li class="page-item">
+								 <a class="page-link" href="#" aria-label="Previous">
+								   <span aria-hidden="true">&laquo;</span>
+								  </a>
+							 </li>
+						     <li class="page-item"><a class="page-link" href="#">1</a></li>
+					   	     <li class="page-item"><a class="page-link" href="#">2</a></li>
+					  	     <li class="page-item"><a class="page-link" href="#">3</a></li>
+					  	     <li class="page-item">
+							 <a class="page-link" href="#" aria-label="Next">
+							    <span aria-hidden="true">&raquo;</span>
+							 </a>
+							 </li>
+						  </ul>
+					   </nav>
+					</div>
+				</div>
+			</div>
+			
 	</body>
 </html>
