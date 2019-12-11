@@ -1,4 +1,4 @@
-package com.example.demo.connection;
+package com.example.demo.connectionDemo;
 
 import com.ibm.as400.access.AS400;
 import com.ibm.as400.access.AS400Message;
@@ -12,14 +12,20 @@ import com.ibm.as400.access.CommandCall;
  * */
 
 public class As400Connection {
-
+ 
+	 
 	public static void main(String[] args) {
+		
 		String server = "10.9.2.121";
 		String user = "DDSWWWCZM";
 		String pass= "chris@02";
-		String ClCommand ="CALL PGM(WWWSRCCZM/SAVE)";
+	//	String ClCommand ="CALL PGM(WWWSRCCZM/SAVE)";
+	//	                  "CALL PGM(WWWSRCCZM/CZMRTEST) PARM(3,4)";
+		String ClCommand ="CALL PGM(WWWSRCCZM/WWWRTEST) PARM('WWWSRCCZM' 'TBPERSONA')";
+				
 		
-		AS400 system = new AS400(server,user);
+		
+		AS400 system = new AS400(server,user,pass);
 		System.out.println("El objeto As400 ya fue creado");
 		
 		CommandCall comando = new CommandCall(system);
@@ -32,12 +38,12 @@ public class As400Connection {
 				
 				AS400Message[] mensajeList = comando.getMessageList();
 				if(mensajeList.length > 0) {
-					System.out.println(", mensajes desde el comando ");
+					System.out.println("Mensajes desde el comando ");
 					System.out.println(" ");
 					
 					for (int i = 0; i < mensajeList.length; i++) {
 					//	System.out.print  (mensajeList[i].getID());
-						System.out.print  ("Mensaje Final");
+						System.out.print  ("Mensaje del AS400");
 						System.out.print  (": ");
 						System.out.println(mensajeList[i].getText());		
 					}

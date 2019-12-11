@@ -1,4 +1,4 @@
-package com.example.demo.connection;
+package com.example.demo.connectionDemo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -23,12 +23,22 @@ public class IbmDb2Connection {
 			System.out.println("Aqui todo bien");
 			
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT EMPNO FROM VISION2.EMPLOYEE");
+			ResultSet rs = stmt.executeQuery("SELECT EMPNO,FIRSTNME,LASTNAME,JOB FROM VISION2.EMPLOYEE");
 			
 			System.out.println("Al parecer todo sale de PTM");
+			
+		    System.out.println("|*************************************************|" );
+			System.out.println("Se convocan a los siguientes empleados: " );
 	        while (rs.next()) {
-	        	 String empNo = rs.getString(1);
-		          System.out.println("Número de empleado = " + empNo);
+	        	 String empNo = rs.getString(1);       	
+	        	 String nombre = rs.getString(2).trim();
+	        	 String apellido = rs.getString(3).trim();
+	        	 String puesto = rs.getString(4);
+	        	 
+			     System.out.println("Empleado = " + nombre + " " + apellido );
+			     System.out.println("Número de empleado = " + empNo );
+			     System.out.println("Puesto = " + puesto );
+			     System.out.println(" ");
 		        }
 			
 	        conn.close();
