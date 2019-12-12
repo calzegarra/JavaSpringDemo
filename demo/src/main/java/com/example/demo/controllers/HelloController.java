@@ -13,6 +13,8 @@ import com.example.demo.entities.HelloMessage;
 @Controller
 public class HelloController {
 
+
+	
 	@RequestMapping(value = "/otra", method = RequestMethod.GET)
 //	@ResponseBody
 	public String hola(HttpServletRequest solicitud, Model modelo) {
