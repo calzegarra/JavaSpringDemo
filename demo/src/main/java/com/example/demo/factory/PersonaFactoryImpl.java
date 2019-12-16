@@ -37,11 +37,14 @@ public class PersonaFactoryImpl implements IPersonaFactory{
 			Connection ora = OracleConexion.getConnection();
 			Statement stm = ora.createStatement();
 		
-			stm.executeUpdate("INSERT INTO bddemo.tbpersona " + 
+			String qry = "INSERT INTO bddemo.tbpersona " + 
 					"VALUES ('" + persona.getNombre() +"', "
-							+ "'" + persona.getApellido() +"', "
-							+ "'" + persona.getCedula() +"', "
-							+ "'"+ persona.getFecNacimiento() +"')");
+					+ "'" + persona.getApellido() +"', "
+					+ persona.getCedula() + ","
+					+ "'"+ persona.getFecNacimiento() +"')";
+					
+			LOG.info(qry);
+			stm.executeUpdate(qry);
 			
 			ora.close();
 			LOG.info("Registro exitoso");
