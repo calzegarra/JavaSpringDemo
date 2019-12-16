@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../static/css/bootstrap.css"/>
 		<script th:src="@{/js/jquery.js}"  src="../static/js/jquery.js"></script>
@@ -7,7 +7,7 @@
 		<title>Registro de Persona al Sistema</title>
 	</head>
 <body>
-<form>
+<form th:action="@{/registraPersona}" th:object="${personaBean}" method="post">
     <div class="form-group">
 		<table class="table-responsive">
 			<thead>
@@ -24,7 +24,7 @@
 					    <label>Nombres</label>
 					</td>
 					<td>
-					    <input type="text" id="txtNombre" class="form-control">
+					    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese sus nombres" autofocus="autofocus">
 					</td>					
 				</tr>
 				<tr>
@@ -32,7 +32,7 @@
 					    <label>Apellidos</label>
 					</td>
 					<td>
-					    <input type="text" id="txtApellido" class="form-control">
+					    <input type="text"  name="apellido" id="apellido" class="form-control" placeholder="Ingrese sus apellidos" autofocus="autofocus">
 					</td>					
 				</tr>
 				<tr>
@@ -40,7 +40,7 @@
 					    <label>Cedula</label>
 					</td>
 					<td>
-					    <input type="text" id="txtCedula" class="form-control">
+					    <input type="text"  name="cedula" id="cedula" class="form-control" placeholder="Ingrese su cedula" autofocus="autofocus">
 					</td>					
 				</tr>
 				<tr>
@@ -48,12 +48,12 @@
 					    <label>Fecha de Nacimiento</label>
 					</td>
 					<td>
-					    <input type="date" id="txtFecha" class="form-control">
+					    <input type="date" name	="fecNacimiento" id="fecNacimiento" class="form-control" placeholder="Ingrese su fecha de Nacimiento" autofocus="autofocus">
 					</td>					
 				</tr>	
 				<tr>
 					<td colspan="2">
-					    <input type="button" id="btnRegistrar" value="Registrar" class="btn btn-dark">
+					    <input type="submit" value="Registrar" class="btn btn-dark">
 					</td>
 				</tr>											
 			</tbody>
@@ -61,4 +61,4 @@
     </div>
 </form>    							
 </body>
-</html>
+</html> 
