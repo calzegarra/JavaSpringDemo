@@ -31,5 +31,11 @@ public class PersonaServiceImpl implements IPersonaService {
 		
 	}
 
+	@Override
+	public void RegistraPersonaFoto(PersonaBean persona) {
+		per.RegistraPersonaFoto(persona);
+		
+	}
+
 	
 }

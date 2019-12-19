@@ -41,8 +41,8 @@ public class Post {
 	}
 	
 	public Post() {
-		
-	}
+		 
+	} 
 	
 	public Post(int id, String descripcion, String urlimg, Date fecha, String titulo) {
 		super();

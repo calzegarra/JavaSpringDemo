@@ -1,11 +1,17 @@
 package com.example.demo.entities;
 
-public class PersonaBean {
+import java.awt.Image;
+import java.io.InputStream;
 
+public class PersonaBean {
+ 
 	private Integer cedula;
 	private String nombre;
 	private String apellido;
 	private String FecNacimiento;
+	private InputStream fotoSave;
+	private byte[] foto;  
+//	private Image foto2;
 	
 	public Integer getCedula() {
 		return cedula;
@@ -18,9 +24,9 @@ public class PersonaBean {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
+	} 
 	public String getApellido() {
-		return apellido;
+		return apellido; 
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
@@ -31,6 +37,19 @@ public class PersonaBean {
 	public void setFecNacimiento(String fecNacimiento) {
 		FecNacimiento = fecNacimiento;
 	}
+	public byte[] getFoto() {
+		return foto;
+	}
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
+	public InputStream getFotoSave() {
+		return fotoSave;
+	}
+	public void setFotoSave(InputStream fotoSave) {
+		this.fotoSave = fotoSave;
+	}
+	
 	
 	
 }
