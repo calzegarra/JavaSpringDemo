@@ -10,4 +10,4 @@ ADD Imagen BLOB NuLL;
 select * from bddemo.TBPERSONA
 
 DROP TABLE bddemo.TBPERSONA
-
+ 
