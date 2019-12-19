@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.Part;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +14,7 @@ import com.example.demo.entities.HelloMessage;
 @Controller
 public class HelloController {
 
-
+ 
 	
 	@RequestMapping(value = "/otra", method = RequestMethod.GET)
 //	@ResponseBody
@@ -21,6 +22,7 @@ public class HelloController {
 		
 		
 		String nombre = solicitud.getParameter("nombre");
+//		Part imagen = solicitud.getPart("foto");
 		
 		if (nombre == null) {
 			nombre = "MunDo";

@@ -9,5 +9,7 @@ public interface IPersonaService {
 	public String Registra(String persona);
 	
 	public void RegistraPersona(PersonaBean persona);
+	
+	public void RegistraPersonaFoto(PersonaBean persona);
 
 }
