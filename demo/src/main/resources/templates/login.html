@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet"
+	href="../static/css/bootstrap.css" />
+<script th:src="@{/js/jquery.js}" src="../static/js/jquery.js"></script>
+<script th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+<title>Autentificacion de Empleado</title>
+</head>
+<body>
+	<div class="card text-center">
+		<div class="card-header">Autentificación de Usuario</div>
+
+		<div class="card-body"
+			style="padding-left: 450px; padding-right: 450px;">
+			<h5 class="card-title">LOGIN</h5>
+
+			<div class="justify-content-md-center mr-sm-5 ml-sm-5">
+				<input type="text" name="usuario" id="usuario" class="form-control"
+					placeholder="Usuario" autofocus="autofocus">
+			</div>
+
+			<div class="justify-content-md-center mr-sm-5 ml-sm-5">
+				<input type="password" name="clave" id="clave" class="form-control"
+					placeholder="Clave" maxlength="10" autofocus="autofocus">
+			</div>
+
+			<div class="justify-content-md-center mt-4">
+				<input type="submit" value="Autenticar" class="btn btn-dark">
+			</div>
+		</div>
+		<div class="card-footer text-muted">2020</div>
+	</div>
+</body>
+</html>

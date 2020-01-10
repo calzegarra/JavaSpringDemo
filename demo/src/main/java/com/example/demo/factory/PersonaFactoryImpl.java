@@ -58,17 +58,18 @@ public class PersonaFactoryImpl implements IPersonaFactory {
 	public void RegistraPersonaFoto(PersonaBean persona) {
 
 		Connection ora = OracleConexion.getConnection();
-		String SQLQuery = "INSERT INTO bddemo.tbpersona "
-				        + "(NOMBRE,APELLIDO,CEDULA,FECHANACIMIENTO,IMAGEN) VALUES(?,?,?,?,?)";
 		PreparedStatement ps = null;
-
+		
 		try {
+				
+		String SQLQuery = "INSERT INTO bddemo.tbpersona "
+				        + "(NOMBRE,APELLIDO,CEDULA,FECHANACIMIENTO,IDIMAGEN) VALUES(?,?,?,?,null)";
+			
 			ps = ora.prepareStatement(SQLQuery);
 			ps.setString(1, persona.getNombre());
 			ps.setString(2, persona.getApellido());
-			ps.setInt(3, persona.getCedula());
+			ps.setString(3, persona.getCedula());
 			ps.setString(4, persona.getFecNacimiento());
-			ps.setBlob(5, persona.getFotoSave());
 			ps.executeUpdate();
 			
 		} catch (SQLException sql) {
