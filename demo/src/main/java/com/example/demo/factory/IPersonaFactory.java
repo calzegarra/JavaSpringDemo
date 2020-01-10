@@ -10,4 +10,11 @@ public interface IPersonaFactory {
 	
 	public void RegistraPersona(PersonaBean persona);
 	public void RegistraPersonaFoto(PersonaBean persona);
+	
+	/**
+	 * @author c.zegarra
+	 * @Descripcion Para las imagenes
+	 **/
+	
+//	public abstract Persona obtenerPorPK(String idCodigo) throws Exception;
 }

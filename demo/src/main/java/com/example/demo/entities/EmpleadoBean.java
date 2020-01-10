@@ -2,23 +2,23 @@ package com.example.demo.entities;
 
 public class EmpleadoBean {
 
-	private Integer id;
-	private Integer cedula;
+	private String id;
+	private String cedula;
 	private String puesto;
 	private String area;
 	private String usuario;
 	private String clave;
 	
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public Integer getCedula() {
+	public String getCedula() {
 		return cedula;
 	}
-	public void setCedula(Integer cedula) {
+	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
 	public String getPuesto() {

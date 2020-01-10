@@ -1,22 +1,19 @@
 package com.example.demo.entities;
 
-import java.awt.Image;
-import java.io.InputStream;
+import java.math.BigDecimal;
 
 public class PersonaBean {
  
-	private Integer cedula;
+	private String cedula;
 	private String nombre;
 	private String apellido;
-	private String FecNacimiento;
-	private InputStream fotoSave;
-	private byte[] foto;  
-//	private Image foto2;
+	private String fecNacimiento;
+	private BigDecimal idImagen;
 	
-	public Integer getCedula() {
+	public String getCedula() {
 		return cedula;
 	}
-	public void setCedula(Integer cedula) {
+	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
 	public String getNombre() {
@@ -24,31 +21,27 @@ public class PersonaBean {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	} 
+	}
 	public String getApellido() {
-		return apellido; 
+		return apellido;
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
 	public String getFecNacimiento() {
-		return FecNacimiento;
+		return fecNacimiento;
 	}
 	public void setFecNacimiento(String fecNacimiento) {
-		FecNacimiento = fecNacimiento;
+		this.fecNacimiento = fecNacimiento;
 	}
-	public byte[] getFoto() {
-		return foto;
+	public BigDecimal getIdImagen() {
+		return idImagen;
 	}
-	public void setFoto(byte[] foto) {
-		this.foto = foto;
+	public void setIdImagen(BigDecimal idImagen) {
+		this.idImagen = idImagen;
 	}
-	public InputStream getFotoSave() {
-		return fotoSave;
-	}
-	public void setFotoSave(InputStream fotoSave) {
-		this.fotoSave = fotoSave;
-	}
+
+	
 	
 	
 	
